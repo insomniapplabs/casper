@@ -1,0 +1,60 @@
+<div class="post-view-container">
+	<div class="post-detail-bar">
+		<div class="row">
+			<div class="col-md-6">
+				<div class="author">
+					<p>Written by Aaron Johnson</p>
+				</div>
+			</div>
+			<div class="col-md-6">
+				<p class="text-right">
+					<%= link_to edit_post_path(post), class: "gray" do %>
+						<span class="glyphicon glyphicon-pencil"></span>
+					<% end %>&nbsp;&nbsp;&nbsp;
+					<%= link_to "#", data: { toggle: "modal", target: "#myModal" }, class: "gray" do %>	
+						<span class="glyphicon glyphicon-cog"></span>
+					<% end %>
+				</p>
+
+
+				<!-- MODAL CODE IF NECESSARY -->
+
+				<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+					<div class="modal-dialog">
+    				<div class="modal-content">
+      				<div class="modal-header">
+        				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        				<h4 class="modal-title" id="myModalLabel">Modal title</h4>
+      				</div>
+      				<div class="modal-body">
+
+      				</div>
+      				<div class="modal-footer">
+        				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        				<button type="button" class="btn btn-primary">Save changes</button>
+      				</div>
+    				</div><!-- /.modal-content -->
+  				</div><!-- /.modal-dialog -->
+				</div><!-- /.modal -->
+
+				
+
+			</div>
+		</div>
+	</div>
+
+	<div class="post-body">
+		<h1><%= post.title %></h1>
+		<%= markdown(post.body) %>
+
+	</div>
+
+
+
+
+
+</div>
+
+
+
+

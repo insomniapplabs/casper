@@ -1,0 +1,71 @@
+<%= render 'partials/nav' %>
+<div class="wrapper">
+<%= form_for @post do |f| %>
+  <% if alert.present? %>
+  <div class="alert">
+    <% flash.each do |name, msg| %>
+    <% if msg.is_a?(String) %>
+      <div class="alert alert-<%= name == :notice ? "success" : "danger" %>">
+        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+        <%= content_tag :div, msg, :id => "flash_#{name}" %>
+      </div>
+    <% end %>
+    <% end %>
+  </div>
+  <% end %>
+
+  <div class="enter-title">
+    <div class="row">
+      <div class="col-md-10">
+        <div class="form-group">
+          <%= f.text_field :title, placeholder: "Your Post Title", id: "title-input", autocomplete: "off", autofocus: true, class: "form-control", tabindex: 1 %>
+        </div>
+      </div>
+      <div class="col-md-2 pad-left">
+        <div class="submit-cont">
+          <div class="btn-group pull-right">
+            <button type="button" class="btn btn-primary">Save Draft</button>
+            <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+            <span class="caret"></span>
+            <span class="sr-only">Toggle Dropdown</span>
+            </button>
+            <ul class="dropdown-menu" role="menu">
+              <li><%= f.submit "Save as Draft", name: "save_as_draft" %></li>
+              <li><%= f.submit "Publish Now", name: "publish" %></li>
+              <li class="divider"></li>
+              <li><%= link_to "Cancel", root_path, class: "cancel-link" %><li>
+          </div>  
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="tagging">
+    <div class="row">
+      <div class="col-md-6">
+        <span class="glyphicon glyphicon-tag gray-icon" id="tag-icon"></span>
+        <%= f.text_field :tag_list, id: "tag-input", placeholder: "Add tag (comma separated)"  %>
+      </div>
+      <div class="col-md-6">
+        <span class="glyphicon glyphicon-calendar gray-icon", id="calendar-icon"></span>
+        <%= f.text_field :pub_date, class: "calendar-input", id: "datepicker", placeholder: "Add a pub date" %>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="editor_wrapper">
+    <div class="editor_container">
+      <p>Markdown</p>
+      <div class="editor_padding">
+        <%= f.text_area :body, id: "your_editor", tabindex: 2 %>
+      </div>
+    </div>
+    <div class="previewer_container">
+      <p>Preview</p>
+      <div id="your_previewer"></div>
+    </div>
+  </div>
+<% end %>
+</div>
+

@@ -1,0 +1,44 @@
+<%= render 'partials/nav' %>
+<div class="wrapper">
+<!-- POST LISTING -->
+	<div class="main-container">
+		<div class="row">
+			<div class="col-md-4 row-border">
+				<div class="all-post-bar">
+					<p>All Posts 
+					<%= link_to new_post_path, class: "gray" do %>
+					<span class="glyphicon glyphicon-plus pull-right go"></span>
+					<% end %>
+					</p>
+				</div>
+				<div class="post-list">
+					<ul class="menu">
+						<% for post in @posts %>
+						<% if post.draft == true %>
+						<li>
+							<h4><%= link_to post.title, post, remote: true, class: "links-post" %></h4>
+							<p><span class="red">Draft</span></p>
+						</li>
+						<% else %>
+						<li>			
+							<h4><%= link_to post.title, post, remote: true, class: "links-post" %></h4>
+							<% if post.pub_date.present? && post.pub_date <= Date.today %>
+							<p><span class="grey">Published on <%= post.pub_date.strftime('%B %-d, %Y') %></span></p>
+							<% elsif post.pub_date.present? && post.pub_date > Date.today %>
+							<p><span class="grey">Scheduled to be published on <%= post.pub_date.strftime('%B %-d, %Y') %></span></p>
+							<% elsif post.pub_date.blank? %>
+							<p><span class="grey">Publish date not present.</span></p>
+							<% end %>	
+						</li>
+						<% end %>
+						<% end %>
+					</ul>
+				</div>
+			</div>
+			<div class="col-md-8">
+				<div class="post-view"></div>
+			</div>
+		</div>
+	</div>
+</div>
+

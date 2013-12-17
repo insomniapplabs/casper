@@ -1,0 +1,24 @@
+<%= render 'partials/nav' %>
+
+<!-- POST LISTING -->
+
+
+
+
+	<div class="row">
+		<div class="col-md-4">
+			<ul>
+				<% for post in @posts %>
+				<% if post.draft == true %>
+				<li><%= link_to "#{post.title} (Draft)", post, class: "links-post" %></li>
+				<% else %>
+				<li><%= link_to post.title, post, class: "links-post" %></li>
+				<% end %>
+				<% end %>
+			</ul>
+		</div>
+		<div class="col-md-8">
+			<h2><%= @post.title %></h2>
+			<%= markdown(@post.body) %>
+		</div>
+	</div>

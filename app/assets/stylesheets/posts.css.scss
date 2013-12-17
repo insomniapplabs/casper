@@ -1,0 +1,116 @@
+	// Place all the styles related to the posts controller here.
+	// They will automatically be included in application.css.
+	// You can use Sass (SCSS) here: http://sass-lang.com/
+
+/* STYLES REQUIRED FOR THE EDITOR */
+
+html, body { width: 100%;height: 100%;padding: 0;margin: 0; }
+
+body { background-color: #EDECE3;font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; }
+
+header {text-align: center;margin-bottom: 40px; }
+header h1 {color: #54ad9c;font-size: 2em; }
+header p { }
+header a { color: #92b300; }
+
+.new-post-hdr { background:#222222;}
+
+
+.editor_wrapper { width: 100%;background:white; }
+.editor_container, .previewer_container {width: 49.5%;display: inline-block;vertical-align: top;padding:20px; }
+.editor_container { border-right:3px solid #EDECE3; }
+.editor_padding { padding: 20px 20px 0 20px;/*background: #042029;*/}
+#your_editor {width: 100%;padding: 0 0 20px 0;overflow-y: auto;height: 600px;vertical-align: bottom; }
+#your_previewer { height: 600px;overflow-y: auto;padding: 20px;background: #fff; }
+#your_previewer h1 { font-size:2.8em;margin-bottom:30px;font-family:"Lucida Grande", sans-serif;font-weight:bold;   }
+#your_previewer p, .post-view li  { font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;font-weight: 300;font-size:1.2em; }
+
+
+
+.dropdown-menu li {background:white;padding-left:20px;display:block; }
+.dropdown-menu li:hover { background:#1C8DCA;padding-left:20px;display:block; }
+.dropdown-menu input { background:none;margin-left:0; }
+.dropdown-menu input:hover { background:none;color:white;margin-left:0; }
+.dropdown-menu a.cancel-link { background:none;padding-left:5px; }
+.dropdown-menu a.cancel-link:hover { background:none;color:white;padding-left:5px; }
+
+textarea:focus { outline:none; }
+
+.previewer_container { padding-top:20px;padding-left:15px; }
+
+input#title-input { border:none;box-shadow:none;font-size:30px;line-height:1;margin:0;padding:10px;height:40px;font-weight:bold; }
+input, select { border:none;box-shadow:none; }
+
+
+form input[type=text]:focus, form input[type=password]:focus, textarea:focus { outline: none; }
+
+.enter-title { padding-left:10px;padding-bottom:0px;padding-top:15px;background-color:white;border-bottom:3px solid #EDECE3; }
+
+
+.submit-cont { padding-right:20px;padding-top:3px;}
+
+.menu { list-style:none;padding-left:0; }
+.menu li { border-bottom:1px solid #EDECE3;padding-left:20px;padding-top:10px;padding-bottom:5px; }
+.menu li > a { display:block; }
+
+.wrapper { padding:0 20px; }
+
+.all-post-bar { background:white;padding-left:20px;padding-right:20px; }
+.all-post-bar { background:white;border-bottom:2px solid #eee;border-right:3px solid #EDECE3;}
+.all-post-bar p { margin:0;padding-top:10px;padding-bottom:10px; }
+.main-container { background:white; }
+
+.post-detail-bar { padding-top:10px;padding-right:20px;}
+
+.post-list { margin-top:0; }
+
+.post-view { }
+.post-body h1 { font-size:2.8em;margin-bottom:30px;font-family:"Lucida Grande", sans-serif;font-weight:bold;   }
+.post-body p, .post-view li  { font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+   font-weight: 300;font-size:1.2em;}
+
+
+.nav a { font-size:.8em; }
+.green { color:green; }
+
+a.links-post { color:black;font-weight:normal;font-size:1.0em;font-family:"Lucida Grande", sans-serif;display:block;text-decoration:none; }
+a.edit-post { font-size:.3em;font-weight:normal; }
+
+.post-list { border-right:3px solid #EDECE3;}
+.red { color:#E45A3D;}
+.gray { color:#aaa; }
+.gray:hover { color:#000;}
+.grey { color:#aaa; }
+.post-body { padding:20px 70px 50px 50px;}
+
+.links-post-selected { color:black;font-weight:bold;font-size:1.0em;font-family:"Lucida Grande", sans-serif;display:block;text-decoration:none;font-weight:bold; }
+.selected { background:#F6F6F7;border-left:10px solid #ddd;margin-right:-10px;width:100%; }
+.selected a { font-weight:bold; }
+.selected-hover { background:#F6F6F7;border-left:10px solid #bbb;margin-right:-10px;width:100%; }
+
+.tagging { background:black;padding:10px 15px 10px 20px;border-bottom:3px solid #EDECE3; }
+.gray-icon { color:#777;cursor:pointer;padding-right:20px; }
+input#tag-input { border:none;box-shadow:none;margin:0;height:20px;background:black;color:#fff;width:90%; }
+input#tag-input-edit { border:none;box-shadow:none;margin:0;height:20px;background:black;color:#fff;width:90%; }
+input.calendar-input { border:none;box-shadow:none;margin:0;height:20px;background:black;color:#fff;width:90%; }
+input#datepicker { border:none;box-shadow:none;margin:0;height:20px;background:black;color:#fff;width:90%; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

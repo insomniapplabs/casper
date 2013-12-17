@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Markprev</title>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+
+<script type="text/javascript">
+    $(function () {
+      var $editor = $("#your_editor");
+      var $previewer = $("#your_previewer")
+
+      
+
+      var setSize = function () {
+        windowHeight = $(window).height();
+        editorPadding = $editor.outerHeight() - $editor.height();
+        $editor.height(windowHeight - editorPadding);
+        previewerPadding = $previewer.outerHeight() - $previewer.height();
+        $previewer.height(windowHeight - previewerPadding);
+        $previewer.trigger("crevasse.resize");
+      };
+
+      setSize();
+
+      $(window).resize(setSize);
+
+    });
+  </script>
+
+  <script type="text/javascript">
+    $(function () {
+      var $editor = $(".post-list");
+      var $previewer = $(".post-view")
+
+      
+
+      var setSize = function () {
+        windowHeight = $(window).height();
+        editorPadding = $editor.outerHeight() - $editor.height();
+        $editor.height(windowHeight - editorPadding);
+        previewerPadding = $previewer.outerHeight() - $previewer.height();
+        $previewer.height(windowHeight - previewerPadding);
+        $previewer.trigger("crevasse.resize");
+      };
+
+      setSize();
+
+      $(window).resize(setSize);
+
+    });
+  </script>
+
+
+</head>
+<body>
+
+<%= yield %>
+
+</body>
+</html>

@@ -1,0 +1,20 @@
+<%= render 'partials/nav' %>
+<%= form_for @post do |f| %>
+  <div class="enter-title">
+    <%= f.text_field :title, placeholder: "Your Post Title", id: "title-input", autocomplete: "off", autofocus: true %>
+  </div>
+  <div class="editor_wrapper">
+    <div class="editor_container">
+      <div class="editor_padding">
+        <%= f.text_area :body, id: "your_editor" %>
+      </div>
+    </div>
+    <div class="previewer_container">
+      <div id="your_previewer"></div>
+    </div>
+  </div>
+
+  <div id="publish-bar">
+    <%= f.submit "Save Post", class: "btn btn-primary pull-right" %>
+  </div>
+<% end %>
