@@ -13,5 +13,6 @@
  *= crevasse
  *= bootstrap
  *= jquery.tagsinput
+ *= require jquery.fileupload-ui
  *= require_tree .
  */

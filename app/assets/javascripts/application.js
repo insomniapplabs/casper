@@ -23,4 +23,5 @@
 //= require tagging
 //= require bootstrap
 //= require bootstrap-datepicker
+//= require jquery-fileupload
 //= require_tree .
